@@ -851,13 +851,21 @@ a {
   top: 50%;
   left: 50%;
   transform: scale(1) translate(-50%, -50%);
-  width: 450px;
+  max-width: 450px;
   padding: 40px;
   background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   transition-property: opacity, visibility, transform;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media (max-width: 480px) {
+  .modal__window {
+    width: 93.75vw;
+    height: 126.875vw;
+    padding: 8.3333333333vw;
+    overflow-y: scroll;
+  }
 }
 @media (min-width: 768px) and (max-width: 1199.98px) {
   .modal__window {
