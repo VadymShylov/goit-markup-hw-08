@@ -1,0 +1,81 @@
+//subscribe
+.subscribe__section {
+  display: flex;
+  flex-direction: column;
+  @include mq(tab) {
+    width: 100%;
+  }
+  @include mq(noDesc) {
+    align-items: center;
+  }
+  @include mq(desc) {
+    margin-left: 93px;
+  }
+}
+
+.subscribe__title {
+  color: $header-bgr-color;
+  @include fonts(14px, 700, 1.14, null);
+  //   font-weight: 700;
+  //   font-size: 14px;
+  //   line-height: 1.14;
+  margin: 0px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  @include mq(noDesc) {
+    padding-top: 60px;
+  }
+}
+
+.subscribe__input {
+  width: calc(100vw - 30px);
+  max-width: 450px;
+  height: 50px;
+
+  padding: 15px 0 15px 16px;
+  background-color: $footer-bgr-color;
+  color: $header-bgr-color;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  @include mq(desc) {
+    width: 358px;
+    height: 50px;
+  }
+}
+
+.subscribe__button {
+  @include display;
+  width: 200px;
+  height: 50px;
+  padding: 10px 28px 10px 29px;
+  background-color: $accent-bgr-color;
+  color: $header-bgr-color;
+  border-radius: 4px;
+
+  border: 1px solid $accent-bgr-color;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  @include mq(noDesc) {
+    margin-top: 20px;
+  }
+  @include mq(desc) {
+    margin-left: 12px;
+  }
+}
+
+.button__form {
+  display: flex;
+
+  @include mq(noDesc) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.svg__send {
+  fill: currentColor;
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+}

@@ -1,0 +1,30 @@
+.nav {
+  background-color: $header-bgr-color;
+  border-bottom: 1px solid $header-border-color;
+  .nav__list {
+    @include mq(mob-only) {
+      display: none;
+    }
+  }
+  .contact__list {
+    @include mq(mob-only) {
+      display: none;
+    }
+  }
+}
+.nav__list {
+  @include mq(mob-only) {
+    display: none;
+  }
+}
+.main__nav {
+  display: flex;
+  align-items: center;
+  @include mq(mob-only) {
+    justify-content: space-between;
+  }
+}
+.header__nav {
+  display: flex;
+  align-items: baseline;
+}

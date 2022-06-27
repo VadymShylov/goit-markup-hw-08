@@ -1,0 +1,34 @@
+.social__list {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+
+  margin-top: 16px;
+}
+
+.social__item {
+  width: 44px;
+  height: 44px;
+
+  &:not(:first-child) {
+    margin-left: 10px;
+  }
+}
+
+.crew__link {
+  @include display;
+  border-radius: 50%;
+
+  width: 100%;
+  height: 100%;
+  color: $link-tex-color;
+
+  transition-property: background-color, color;
+  @include transition;
+
+  &:hover,
+  &:focus {
+    color: $header-bgr-color;
+    background-color: $accent-bgr-color;
+  }
+}

@@ -1,0 +1,107 @@
+//Crewmember
+.crewmember {
+  background-color: $team-section-bgr-color;
+  @include mq(noDesc) {
+    @include padding_mob;
+  }
+}
+
+.crewmember__list {
+  @include mq(tab) {
+    display: flex;
+    // flex-wrap: wrap;
+  }
+  @include mq(noDesc) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+/*crew-item*/
+
+.crew__item {
+  margin-bottom: 30px;
+  @include mq(tab-only) {
+    width: calc((100% - 2 * 15px) / 2);
+    margin-right: 15px;
+    margin-bottom: 15px;
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+
+    &:nth-last-child(-n + 2) {
+      margin-bottom: 0;
+    }
+  }
+  @include mq(desc) {
+    width: calc((100% - 3 * 30px) / 4);
+    margin-right: 30px;
+    margin-bottom: 30px;
+
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
+
+    &:nth-last-child(-n + 4) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.crew__card {
+  margin-top: 0;
+  padding-top: 30px;
+  padding-bottom: 24px;
+  @include mq(desc) {
+    padding-bottom: 30px;
+  }
+  box-shadow: $crew-box-shadow;
+  border-radius: 0px 0px 4px 4px;
+  background-color: $header-bgr-color;
+}
+
+/*crew-title*/
+.crew__title {
+  margin-bottom: 30px;
+  @include mq(desc) {
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.2;
+  }
+
+  @include fonts(28px, 700, 1.17, null);
+  //   font-weight: 700;
+  //       font-size: 28px;
+  //       line-height: 1.17;
+  //   text-align: center;
+}
+
+/*crew-name*/
+.crew__name {
+  margin-top: 0;
+  margin-bottom: 10px;
+  @include fonts(16px, 500, 1.2, null);
+  //   font-weight: 500;
+  //   font-size: 16px;
+  //   line-height: 1.2;
+  text-align: center;
+}
+
+/*crew-position*/
+.crew__position {
+  color: $additional-text-color;
+  font-size: 16px;
+  line-height: 1.2;
+  text-align: center;
+}
+.crew__img {
+  display: block;
+  width: calc(100vw - 30px);
+  max-width: 450px;
+  height: auto;
+
+  @media screen and (min-width: 768px) {
+    width: 100%;
+  }
+}

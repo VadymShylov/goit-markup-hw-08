@@ -1,0 +1,111 @@
+//Footer
+.footer {
+  background-color: $footer-bgr-color;
+  @include padding_mob;
+}
+
+/*footer-logo*/
+
+.logo {
+  display: block;
+  margin-top: 0;
+  margin-bottom: 20px;
+
+  color: $title-text-color;
+  text-decoration: none;
+
+  font-family: $text-raleway;
+  @include fonts(24px, 700, 1.16, null);
+  //   font-weight: 700;
+  //   font-size: 24px;
+  //   line-height: 1.16;
+
+  @include mq(desc) {
+    font-size: 26px;
+    line-height: 1.2;
+  }
+
+  transition-property: color;
+  @include transition;
+  &:hover,
+  &:focus {
+    color: $accent-bgr-color;
+  }
+}
+
+/*Address*/
+
+/*footer-link*/
+
+.footer__link {
+  color: $title-text-color;
+  text-decoration: none;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.7;
+
+  transition-property: color;
+  @include transition;
+  &:hover,
+  &:focus {
+    color: $accent-bgr-color;
+  }
+}
+.address__list {
+  @include mq(noDesc) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.address__item {
+  margin-top: 0;
+  margin-bottom: 8px;
+
+  &:nth-child(3n) {
+    margin-bottom: 0;
+  }
+  @include mq(desc) {
+    margin-top: 0;
+    margin-bottom: 9px;
+
+    &:nth-child(3n) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.footer__contact {
+  color: $footer-link-color;
+  text-decoration: none;
+
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.7;
+
+  transition-property: color;
+  @include transition;
+  &:focus,
+  &:hover {
+    color: $accent-bgr-color;
+  }
+}
+
+.footer__content {
+  align-items: baseline;
+  @include mq(tab) {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  @include mq(noDesc) {
+    flex-wrap: wrap;
+  }
+}
+
+.footer__wrap {
+  @include mq(noDesc) {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}

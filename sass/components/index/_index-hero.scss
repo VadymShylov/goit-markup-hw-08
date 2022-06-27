@@ -1,0 +1,108 @@
+//Hero
+
+.hero {
+  background-color: $titel-bgr-color;
+  background-repeat: no-repeat;
+  background-position: center;
+  //   max-width: 1600px;
+  background-size: cover;
+  margin-inline: auto;
+  padding: 118px 0;
+  text-align: center;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/header-background-mobile.jpg);
+
+  @include mq(retina) {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/header-background-mobile@2x.jpg);
+  }
+  @include mq(tab-only) {
+    padding: 118px 0;
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/header-background-tablet.jpg);
+
+    margin-inline: auto;
+    @include mq(retina) {
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(../images/header-background-tablet@2x.jpg);
+    }
+  }
+  @include mq(desc) {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/header-background.jpg);
+    max-width: 1600px;
+    padding: 200px 0px;
+    margin-inline: auto;
+    @include mq(retina) {
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(../images/header-background@2x.jpg);
+    }
+  }
+}
+
+/*-------Hero-title-------*/
+.hero__title {
+  max-width: 360px;
+  margin: auto;
+  color: $title-text-color;
+  @include fonts(26px, 900, 1.62, 0.06em);
+  //   font-weight: 900;
+  //   font-size: 26px;
+  //   line-height: 1.62;
+  //   letter-spacing: 0.06em;
+  text-align: center;
+  text-transform: uppercase;
+
+  @include mq(tab) {
+    font-size: 20px;
+    line-height: 1.36;
+  }
+
+  @include mq(desc) {
+    font-size: 44px;
+    line-height: 1.4;
+    max-width: 696px;
+  }
+}
+
+.hero__button {
+  background-color: $accent-bgr-color;
+  color: $title-text-color;
+  padding: 10px 32px;
+  margin-top: 30px;
+  min-width: 200px;
+  font-family: inherit;
+  @include fonts(16px, 700, 1.8, 0.06em);
+  //   font-weight: 700;
+  //   font-size: 16px;
+  //   line-height: 1.8;
+  //   letter-spacing: 0.06em;
+  align-items: center;
+
+  transition-property: background-color;
+  @include transition;
+  &:hover,
+  &:focus {
+    background-color: $btn-hover-color;
+    color: $title-text-color;
+  }
+}

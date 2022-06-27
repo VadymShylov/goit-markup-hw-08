@@ -1,0 +1,60 @@
+//Joinn
+.join__title {
+  @include fonts(14px, 700, 1.14, null);
+  //   font-weight: 700;
+  //   font-size: 14px;
+  //   line-height: 1.14;
+  text-transform: uppercase;
+  color: $header-bgr-color;
+  margin-bottom: 20px;
+}
+
+.join__box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60px;
+  @include mq(tab) {
+    margin-left: 165px;
+    padding-top: 0;
+  }
+  @include mq(desc) {
+    margin-left: 70px;
+  }
+}
+
+.join__list {
+  display: flex;
+  list-style: none;
+}
+
+.join__item:not(:first-child) {
+  margin-left: 10px;
+}
+
+.join__item {
+  width: 44px;
+  height: 44px;
+  &:not(:first-child) {
+    margin-left: 10px;
+  }
+  &:not(:first-child) {
+    margin-left: 10px;
+  }
+}
+
+.join__link {
+  width: 100%;
+  height: 100%;
+  @include display;
+  color: $header-bgr-color;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+
+  transition-property: background-color;
+  @include transition;
+  &:hover,
+  &:focus {
+    background-color: $accent-bgr-color;
+  }
+}

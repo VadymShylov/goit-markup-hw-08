@@ -1,0 +1,51 @@
+.general {
+  background-color: $header-bgr-color;
+  @include mq(noDesc) {
+    @include padding_mob;
+  }
+}
+
+.button__list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+
+  gap: 8px;
+  margin-bottom: 30px;
+  @include mq(mob-only) {
+    justify-content: flex-start;
+  }
+  @include mq(desc) {
+    margin-bottom: 50px;
+  }
+}
+
+.button__link {
+  background-color: $team-section-bgr-color;
+  color: $main-text-color;
+  padding: 6px 22px;
+  font-family: inherit;
+  @include fonts(16px, 500, 1.6, 0.03em);
+  // font-weight: 500;
+  // font-size: 16px;
+  // line-height: 1.6;
+  // letter-spacing: 0.03em;
+  text-align: center;
+
+  border: none;
+  border-radius: 4px;
+
+  transition-property: color, background-color, box-shadow;
+  // transition-duration: 250ms;
+  // transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  @include transition;
+
+  &:hover,
+  &:focus {
+    color: $header-bgr-color;
+    background-color: $accent-bgr-color;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+}

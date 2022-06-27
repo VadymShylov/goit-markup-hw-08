@@ -1,0 +1,90 @@
+.nav__list {
+  display: flex;
+  gap: 50px;
+
+  @include mq(mob-only) {
+    flex-direction: column;
+    gap: 32px;
+    align-items: baseline;
+  }
+}
+// .nav__logo{
+//    margin-right: 93px;;
+// }
+
+// .nav__list {
+//   display: flex;
+//   margin-left: 93px;
+// }
+
+// .nav__list .nav__item + .nav__item {
+//   margin-left: 50px;
+// }
+
+// /*-------nav-link--------*/
+
+.nav__link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  color: $main-text-color;
+  text-decoration: none;
+  @include fonts(14px, 500, 1.1, 0.02em);
+  //   font-weight: 500;
+  //   font-size: 14px;
+  //   line-height: 1.1;
+  //   letter-spacing: 0.02em;
+
+  @include mq(mob-only) {
+    @include fonts(40px, null, 1.72, 0.02em);
+    font-size: 40px;
+    line-height: 1.72;
+    text-align: center;
+    letter-spacing: 0.02em;
+  }
+
+  transition-property: color;
+  @include transition;
+  &:hover,
+  &:focus {
+    color: $accent-bgr-color;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: $accent-bgr-color;
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    opacity: 0;
+    transition-property: opacity;
+    @include transition;
+  }
+  @include mq(mob-only) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.nav__item {
+  position: relative;
+}
+
+.current {
+  color: $accent-bgr-color;
+  &::after {
+    opacity: 1;
+  }
+  &:hover::after {
+    opacity: 1;
+  }
+  @include mq(mob-only) {
+    &::after {
+      opacity: 0;
+    }
+  }
+}

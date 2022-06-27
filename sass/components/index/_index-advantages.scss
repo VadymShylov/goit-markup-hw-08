@@ -1,0 +1,63 @@
+.advantages {
+  background-color: $header-bgr-color;
+  @include mq(noDesc) {
+    @include padding_mob;
+  }
+}
+//  flex-basis: calc((100% - кол-во маржинов в строке * значение маржина) / кол-во элементов в строке);
+.advantages__list {
+  @include mq(tab) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+  }
+
+  .advantages__item {
+    @include mq(tab) {
+      width: calc((100% - 30px) / 2);
+    }
+    @include mq(desc) {
+      width: calc((100% - 90px) / 4);
+    }
+  }
+}
+
+/*----no-padding-------*/
+.no__padding {
+  @include mq(desc) {
+    padding-bottom: 0;
+  }
+}
+
+//*-----advantages-title------*/
+
+.advantages__title {
+  margin-bottom: 10px;
+  margin-top: 30px;
+  @include fonts(14px, 700, 1.1);
+
+  text-transform: uppercase;
+}
+
+// /*-----advantages-text------*/
+
+.advantages__text {
+  color: $additional-text-color;
+  font-size: 14px;
+  line-height: 1.71;
+}
+
+.adv__wrap {
+  width: 100%;
+  padding: 25px 0;
+  @include display;
+  // display:flex;
+  // align-items: center;
+  // justify-content: center;
+  background-color: $team-section-bgr-color;
+}
+.advantages__icon {
+  display: block;
+  background-color: $team-section-bgr-color;
+}
