@@ -34,8 +34,8 @@
   transform: scale(1) translate(-50%, -50%);
 
  
-  max-width: 450px;
-
+height: 609px;
+   width: 450px;
   padding: 40px;
   background-color: $header-bgr-color;
   box-shadow: $crew-box-shadow;
@@ -52,11 +52,14 @@
       overflow-y: scroll;
 }
   @include mq(tab-only) {
-    top: 0%;
+    top: 15%;
     transform: translate(-50%, 0) scale(1);
+   width: 528px;
+      height: 581px;
   }
   @include mq(desc) {
     width: 528px;
+    height:581px;
     padding: 40px 41px 40px 39px;
   }
 
