@@ -83,7 +83,7 @@ a {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   transform: translateX(100%);
   opacity: 0;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -123,6 +123,13 @@ a {
   .icon__contact {
     display: none;
   }
+}
+.icon__contact .nav__list {
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 47px;
+  letter-spacing: 0.02em;
 }
 
 .mobile-menu-close {
@@ -262,13 +269,10 @@ a {
 }
 @media (max-width: 767.98px) {
   .nav__link {
-    font-size: 40px;
+    font-size: 30px;
     line-height: 1.72;
     letter-spacing: 0.02em;
-    font-size: 40px;
-    line-height: 1.72;
     text-align: center;
-    letter-spacing: 0.02em;
   }
 }
 .nav__link:hover, .nav__link:focus {
@@ -359,7 +363,7 @@ a {
 }
 @media (max-width: 767.98px) {
   .contact__link {
-    font-size: 34px;
+    font-size: 20px;
     font-weight: 500;
     line-height: 1.17;
     letter-spacing: 0.02em;
@@ -382,7 +386,7 @@ a {
 }
 
 .mob__social-link {
-  font-size: 18px;
+  font-size: 13px;
   font-weight: 500;
   line-height: 1.22;
   /* identical to box height, or 122% */
@@ -392,7 +396,8 @@ a {
 
 .mob__social {
   display: flex;
-  gap: 20px;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
 .mob__social-item:not(:last-child) {
@@ -458,7 +463,7 @@ a {
 }
 @media (min-width: 768px) {
   .hero__title {
-    font-size: 20px;
+    font-size: 26px;
     line-height: 1.36;
   }
 }
@@ -508,6 +513,11 @@ a {
     gap: 30px;
   }
 }
+@media (max-width: 767.98px) {
+  .advantages__list .advantages__item:not(:first-child) {
+    margin-top: 30px;
+  }
+}
 @media (min-width: 768px) {
   .advantages__list .advantages__item {
     width: calc((100% - 30px) / 2);
@@ -535,11 +545,26 @@ a {
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
+@media (max-width: 767.98px) {
+  .advantages__title {
+    text-align: center;
+  }
+}
 
 .advantages__text {
   color: #757575;
   font-size: 14px;
   line-height: 1.71;
+}
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  .advantages__text {
+    width: 354px;
+  }
+}
+@media (min-width: 1200px) {
+  .advantages__text {
+    width: 270px;
+  }
 }
 
 .adv__wrap {
@@ -679,6 +704,7 @@ a {
 /*crew-title*/
 .crew__title {
   margin-bottom: 30px;
+  text-align: center;
   font-size: 28px;
   font-weight: 700;
   line-height: 1.17;
@@ -1108,6 +1134,7 @@ a {
 }
 @media (min-width: 1200px) {
   .address__item {
+    white-space: nowrap;
     margin-top: 0;
     margin-bottom: 9px;
   }
@@ -1131,24 +1158,36 @@ a {
 
 .footer__content {
   align-items: baseline;
+  display: block;
 }
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1199.98px) {
   .footer__content {
     display: flex;
-    justify-content: space-evenly;
-  }
-}
-@media (max-width: 1199.98px) {
-  .footer__content {
+    justify-content: center;
     flex-wrap: wrap;
   }
 }
-
-@media (max-width: 1199.98px) {
-  .footer__wrap {
+@media (min-width: 1200px) {
+  .footer__content {
+    flex-wrap: nowrap;
     display: flex;
-    align-items: center;
-    flex-direction: column;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .footer__wrap {
+    text-align: center;
+  }
+}
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  .footer__wrap {
+    text-align: center;
+  }
+}
+@media (min-width: 1200px) {
+  .footer__wrap {
+    width: 231px;
+    text-align: left;
   }
 }
 
@@ -1159,6 +1198,11 @@ a {
   text-transform: uppercase;
   color: #ffffff;
   margin-bottom: 20px;
+}
+@media (min-width: 1200px) {
+  .join__title {
+    padding-top: 12px;
+  }
 }
 
 .join__box {
@@ -1176,6 +1220,7 @@ a {
 @media (min-width: 1200px) {
   .join__box {
     margin-left: 70px;
+    align-items: flex-start;
   }
 }
 
@@ -1232,6 +1277,7 @@ a {
 @media (min-width: 1200px) {
   .subscribe__section {
     margin-left: 93px;
+    padding-top: 12px;
   }
 }
 
@@ -1412,6 +1458,8 @@ a {
 /*Portfolio-link*/
 .portfolio__link {
   display: block;
+  width: 100%;
+  height: 100%;
   transition-property: box-shadow;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   color: #212121;
@@ -1431,6 +1479,11 @@ a {
   font-weight: 700;
   line-height: 2;
   letter-spacing: 0.06em;
+}
+@media (min-width: 1200px) {
+  .portfolio__title {
+    width: 322px;
+  }
 }
 
 /*Portfolio-text*/

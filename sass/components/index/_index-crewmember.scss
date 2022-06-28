@@ -64,10 +64,12 @@
 /*crew-title*/
 .crew__title {
   margin-bottom: 30px;
+text-align: center;
   @include mq(desc) {
     margin-bottom: 50px;
     font-size: 36px;
     line-height: 1.2;
+  
   }
 
   @include fonts(28px, 700, 1.17, null);

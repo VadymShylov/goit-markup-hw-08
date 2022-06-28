@@ -7,6 +7,9 @@
   text-transform: uppercase;
   color: $header-bgr-color;
   margin-bottom: 20px;
+  @include mq(desc){
+   padding-top:12px;
+  }
 }
 
 .join__box {
@@ -20,6 +23,7 @@
   }
   @include mq(desc) {
     margin-left: 70px;
+   align-items: flex-start;
   }
 }
 

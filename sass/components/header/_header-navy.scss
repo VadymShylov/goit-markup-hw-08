@@ -36,13 +36,13 @@
   //   letter-spacing: 0.02em;
 
   @include mq(mob-only) {
-    @include fonts(40px, null, 1.72, 0.02em);
-    font-size: 40px;
-    line-height: 1.72;
+    @include fonts(30px, null, 1.72, 0.02em);
+   //  font-size: 30px;
+   //  line-height: 1.72;
     text-align: center;
-    letter-spacing: 0.02em;
+   //  letter-spacing: 0.02em;
   }
-
+ 
   transition-property: color;
   @include transition;
   &:hover,

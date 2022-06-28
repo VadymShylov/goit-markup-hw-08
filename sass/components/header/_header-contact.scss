@@ -47,7 +47,7 @@
   //   letter-spacing: 0.02em;
 
   @include mq(mob-only) {
-    @include fonts(34px, 500, 1.17, 0.02em);
+    @include fonts(20px, 500, 1.17, 0.02em);
     // font-weight: 500;
     //    font-size: 34px;
     //    line-height: 1.17;
@@ -71,7 +71,7 @@
   }
 }
 .mob__social-link {
-  @include fonts(18px, 500, 1.22, null);
+  @include fonts(13px, 500, 1.22, null);
   // font-weight: 500;
   //    font-size: 18px;
   //    line-height: 1.22;
@@ -82,7 +82,8 @@
 }
 .mob__social {
   display: flex;
-  gap: 20px;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 .mob__social-item:not(:last-child) {
   border-right: 1px solid rgba(33, 33, 33, 0.2);

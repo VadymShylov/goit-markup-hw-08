@@ -66,6 +66,7 @@
     margin-bottom: 0;
   }
   @include mq(desc) {
+   white-space: nowrap;
     margin-top: 0;
     margin-bottom: 9px;
 
@@ -93,19 +94,27 @@
 
 .footer__content {
   align-items: baseline;
-  @include mq(tab) {
-    display: flex;
-    justify-content: space-evenly;
+  display: block;
+  @include mq(tab-only) {
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
   }
-  @include mq(noDesc) {
-    flex-wrap: wrap;
+  @include mq(desc) {
+    flex-wrap: nowrap;
+    display: flex;
   }
 }
 
 .footer__wrap {
-  @include mq(noDesc) {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+   @include mq(mob-only){
+      text-align: center;
+   }
+   @include mq(tab-only){
+      text-align: center;
+   }
+  @include mq(desc) {
+width: 231px;
+text-align: left;
   }
 }

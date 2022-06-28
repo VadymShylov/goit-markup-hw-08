@@ -6,6 +6,7 @@
 }
 //  flex-basis: calc((100% - кол-во маржинов в строке * значение маржина) / кол-во элементов в строке);
 .advantages__list {
+  
   @include mq(tab) {
     display: flex;
     flex-wrap: wrap;
@@ -14,6 +15,11 @@
   }
 
   .advantages__item {
+   @include mq(mob-only){
+      &:not(:first-child){
+         margin-top:30px;
+      }
+   }
     @include mq(tab) {
       width: calc((100% - 30px) / 2);
     }
@@ -38,6 +44,9 @@
   @include fonts(14px, 700, 1.1);
 
   text-transform: uppercase;
+  @include mq(mob-only){
+   text-align: center;
+  }
 }
 
 // /*-----advantages-text------*/
@@ -46,6 +55,13 @@
   color: $additional-text-color;
   font-size: 14px;
   line-height: 1.71;
+//   width: 450px;
+  @include mq(tab-only){
+   width: 354px;
+  }
+  @include mq(desc){
+   width: 270px;
+  }
 }
 
 .adv__wrap {
@@ -56,6 +72,7 @@
   // align-items: center;
   // justify-content: center;
   background-color: $team-section-bgr-color;
+  
 }
 .advantages__icon {
   display: block;

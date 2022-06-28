@@ -3,6 +3,7 @@
   display: flex;
   flex-wrap: wrap;
   margin-top: 0;
+  
   @include mq(mob-only) {
     justify-content: center;
   }
