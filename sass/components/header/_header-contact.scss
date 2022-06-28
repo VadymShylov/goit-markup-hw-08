@@ -79,6 +79,9 @@
 
   letter-spacing: 0.02em;
   color: $accent-bgr-color;
+  @include mq(mob){
+   font-size: 18px;
+  }
 }
 .mob__social {
   display: flex;

@@ -104,6 +104,16 @@ a {
     color: #2196f3;
   }
 }
+@media (min-width: 480px) {
+  .mobile-menu.is-open .nav__link {
+    font-size: 40px;
+  }
+}
+@media (min-width: 480px) {
+  .mobile-menu.is-open .contact__link {
+    font-size: 34px;
+  }
+}
 
 @media (max-width: 767.98px) {
   .contact__list {
@@ -392,6 +402,11 @@ a {
   /* identical to box height, or 122% */
   letter-spacing: 0.02em;
   color: #2196f3;
+}
+@media (min-width: 480px) {
+  .mob__social-link {
+    font-size: 18px;
+  }
 }
 
 .mob__social {

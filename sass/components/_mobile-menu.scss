@@ -28,6 +28,19 @@
       color: $accent-bgr-color;
     }
   }
+  .nav__link {
+     @include mq(mob) {
+
+
+        font-size: 40px;
+     }
+  }
+  .contact__link{
+   @include mq(mob){
+      font-size: 34px;
+   }
+   
+  }
   
 }
 
