@@ -79,8 +79,11 @@
 
   letter-spacing: 0.02em;
   color: $accent-bgr-color;
-  @include mq(mob){
-   font-size: 18px;
+  @media screen and(max-width:380px){
+   font-size: 9px;
+  }
+  @include mq(mob) {
+    font-size: 18px;
   }
 }
 .mob__social {

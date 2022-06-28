@@ -66,7 +66,7 @@
     margin-bottom: 0;
   }
   @include mq(desc) {
-   white-space: nowrap;
+    white-space: nowrap;
     margin-top: 0;
     margin-bottom: 9px;
 
@@ -96,9 +96,9 @@
   align-items: baseline;
   display: block;
   @include mq(tab-only) {
-   display: flex;
-   justify-content: center;
-   flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
   }
   @include mq(desc) {
     flex-wrap: nowrap;
@@ -107,14 +107,14 @@
 }
 
 .footer__wrap {
-   @include mq(mob-only){
-      text-align: center;
-   }
-   @include mq(tab-only){
-      text-align: center;
-   }
+  @include mq(mob-only) {
+    text-align: center;
+  }
+  @include mq(tab-only) {
+    text-align: center;
+  }
   @include mq(desc) {
-width: 231px;
-text-align: left;
+    width: 231px;
+    text-align: left;
   }
 }
